@@ -1,23 +1,29 @@
-var deckOfCards = [];
-var suits = ["Hearts", "Spades", "Clubs", "Diamonds"];
-var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-
 function getCards() {
-  for(i = 0; i = suits.length; i++) {
-    for(j = 0; j = values.length; j++) {
+  var suits = ["Hearts", "Spades", "Clubs", "Diamonds"];
+  var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  var deckOfCards = [];
+  for(i = 0; i < suits.length; i++) {
+    for(j = 0; j < values.length; j++) {
       var card = {
         suit: suits[i],
         value: values[j]
       };
-      console.log(card);
       deckOfCards.push(card);
     }
   }
-  return deckOfCards;
+  console.log(deckOfCards);
 }
+//
+// function getCards() {
+//   var suits = ["Hearts", "Spades", "Clubs", "Diamonds"];
+//   var deckOfCards = [];
+//   for(i = 0; i  suits.length; i++) {
+//     var card = {
+//       suit: suits[i]
+//     };
+//     deckOfCards.push(card);
+//   }
+//   return console.log(deckOfCards);
+// }
 
-function test(test) {
-  return 2 + test;
-}
-
-document.getElementById("get-deck").addEventListener("click", test);
+document.getElementById("get-deck").addEventListener("click", getCards);
